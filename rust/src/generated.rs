@@ -152,6 +152,7 @@ impl GraphEncoding {
             3 => "PYTORCH",
             4 => "TENSORFLOWLITE",
             5 => "AUTODETECT",
+            6 => "MLX",
             _ => unsafe { core::hint::unreachable_unchecked() },
         }
     }
@@ -163,6 +164,7 @@ impl GraphEncoding {
             3 => "",
             4 => "",
             5 => "",
+            6 => "",
             _ => unsafe { core::hint::unreachable_unchecked() },
         }
     }
