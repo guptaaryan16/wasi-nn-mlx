@@ -138,8 +138,8 @@ pub const GRAPH_ENCODING_ONNX: GraphEncoding = GraphEncoding(1);
 pub const GRAPH_ENCODING_TENSORFLOW: GraphEncoding = GraphEncoding(2);
 pub const GRAPH_ENCODING_PYTORCH: GraphEncoding = GraphEncoding(3);
 pub const GRAPH_ENCODING_TENSORFLOWLITE: GraphEncoding = GraphEncoding(4);
-pub const GRAPH_ENCODING_AUTODETECT: GraphEncoding = GraphEncoding(5);
-pub const GRAPH_ENCODING_MLX: GraphEncoding = GraphEncoding(6);
+pub const GRAPH_ENCODING_MLX: GraphEncoding = GraphEncoding(5);
+pub const GRAPH_ENCODING_AUTODETECT: GraphEncoding = GraphEncoding(6);
 impl GraphEncoding {
     pub const fn raw(&self) -> u8 {
         self.0
@@ -152,8 +152,8 @@ impl GraphEncoding {
             2 => "TENSORFLOW",
             3 => "PYTORCH",
             4 => "TENSORFLOWLITE",
-            5 => "AUTODETECT",
-            6 => "MLX",
+            5 => "MLX",
+            6 => "AUTODETECT",
             _ => unsafe { core::hint::unreachable_unchecked() },
         }
     }
