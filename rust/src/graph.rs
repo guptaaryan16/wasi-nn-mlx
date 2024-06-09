@@ -13,8 +13,8 @@ pub enum GraphEncoding {
     Tensorflow,
     Pytorch,
     TensorflowLite,
-    Autodetec,
-    MLX
+    MLX,
+    Autodetec
 }
 
 /// Define where the graph should be executed.
@@ -468,6 +468,7 @@ mod test {
         assert_eq!(GraphEncoding::Tensorflow as i32, 2);
         assert_eq!(GraphEncoding::Pytorch as i32, 3);
         assert_eq!(GraphEncoding::TensorflowLite as i32, 4);
+        assert_eq!(GraphEncoding::MLX as i32, 5);
     }
 
     #[test]
@@ -491,6 +492,10 @@ mod test {
         assert_eq!(
             GraphEncoding::TensorflowLite as i32,
             generated::GRAPH_ENCODING_TENSORFLOWLITE.raw() as i32
+        );
+        assert_eq!(
+            GraphEncoding::MLX as i32,
+            generated::GRAPH_ENCODING_MLX.raw() as i32
         );
     }
 
